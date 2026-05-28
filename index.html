@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2463eb" />
+  <title>Lista de Tarefas PWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header>
+      <div>
+        <h1>Lista de Tarefas</h1>
+        <p>Progressive Web App com offline, instalação e armazenamento local.</p>
+      </div>
+      <div class="status-bar">
+        <span id="connectionStatus" class="status offline">Offline</span>
+        <button id="installBtn" class="install-btn" hidden>Instalar app</button>
+      </div>
+    </header>
+
+    <section class="task-form">
+      <input id="taskInput" type="text" placeholder="Nova tarefa" aria-label="Nova tarefa" />
+      <button id="addTaskBtn">Adicionar</button>
+    </section>
+
+    <section class="task-list-section">
+      <ul id="taskList" class="task-list"></ul>
+      <div class="task-footer">
+        <span id="taskCount">0 tarefas</span>
+        <button id="clearBtn" class="clear-btn">Limpar tudo</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
